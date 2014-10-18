@@ -147,12 +147,10 @@ li {
   vertical-align: bottom;
 }
 
-.buttons-container {
-  padding: 2em
-}
 .blue-parent {
   background-color: #21A5B8;
   border: 3px solid #21A5B8;
+  padding: 2em;
   padding: 1em;
   margin: 1em 0;
   text-align: center;
