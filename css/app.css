@@ -25,6 +25,7 @@ footer {
 pre {
   margin: 0; }
 
+li {margin: 0 0 1em 0;}
 .clearfix:after {
   content: "";
   display: table;
@@ -77,6 +78,7 @@ pre {
     left: 10px; }
 
 .demo-label {
+  min-width: 50px;
   display: inline-block;
   border-radius: 2px;
   background-color: #66d433;
