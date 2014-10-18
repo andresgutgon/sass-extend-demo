@@ -54,6 +54,9 @@ li {
   font-weight: bold;
   font-size: 1.4em;
 }
+.red-class .hljs-keyword {
+  color: #AD210E;
+}
 .clearfix:after {
   content: "";
   display: table;
@@ -71,10 +74,11 @@ li {
   margin-top: 0;
   color: #312019;
   font-size: 3em;
+  margin-bottom: 0.2em;
 }
 
 .intro__block {
-  padding: 0 0 1em 0;
+  margin: 0 0 3em 0;
 }
 .intro__block p {
   margin-top: 0
@@ -90,7 +94,7 @@ li {
 
 .highlight-code-wrapper {
   background-color: white;
-  margin: 3em 0 1em 0;
+  margin: 1em 0 3em 0;
   padding: 1em;
   border: 1px solid #d0d0d0;
 }
@@ -119,6 +123,11 @@ li {
 .demo-zone__block {
   float: left;
   width: 100%; }
+.demo-zone__block__inner  {
+  overflow: hidden;
+  max-height: 352px;
+  border-bottom: 1px solid #312019;
+}
 .demo-zone__block__inner > div {
   position: relative;
   border: 1px solid #312019;

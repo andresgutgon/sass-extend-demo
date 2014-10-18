@@ -21,7 +21,7 @@
         <div class="intro">
           <div class="intro__block">
             <h2>What?</h2>
-            <p><button class="base-class--in-red">RED button</button> <strong>never</strong> should be <strong>blue</strong></p>
+            <p>I want to <button class="base-class--in-red">RED button</button> <strong>never</strong> have <strong>blue</strong> background color</p>
             <div class="demo-zone clearfix">
               <div class="demo-zone__block demo-zone__block--first">
                 <div class="demo-zone__block__inner">
@@ -53,12 +53,40 @@
             <h2>The problem:</h2>
             <p>In <strong>DEMO</strong> <span class="demo-label">1</span> <strong>sass</strong> code adds <code class="code-tag red-class">.base-class--in-red</code> in <strong>generated CSS code</strong> under <code class="code-tag">.blue-parent</code></p>
             <p>This was unexpected to me <img src="images/scream.png" alt="Scream emoji" class="emoji">. Maybe it's only me but I didn't know that extending from another class your new class is extended across your entire source code.</p>
-            <p>In <strong>DEMO</strong> <span class="demo-label">2</span>, extending from a <code class="code-tag">%placeholder</code> there is not that problem</p>
+<div class="highlight-code-wrapper">
+  <p><strong>SCSS code:</strong> extending from <code class="code-tag">.base-button</code></p>
+<div class="highlight-code"><pre><code>
+.base-button {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 10px;
+  font-size: 13px;
+  margin: 0 10px 0 0;
+}
+
+.base-button--in-red {
+  @extend .base-button;
+  background-color: #AD210E;
+  color: white;
+  border-color: #AD210E;
+}
+
+// I only want my base button in blue
+.blue-parent {
+  .base-button {
+    color: white;
+    background-color: blue;
+  }
+}
+</code></pre></div>
+</div>
 <div class="highlight-code-wrapper with-samuel">
-  <p><strong>Generated CSS code:</strong></p>
+  <p>Generated CSS code in <strong>DEMO 1</strong></p>
 <div class="highlight-code"><pre><code>
 // Here is the problem.
-// base-button--in-red also pick BLUE styles
+// base-button--in-red also picks BLUE styles
 .blue-parent .base-button,
 .blue-parent .base-button--in-red {
   color: white;
@@ -66,29 +94,14 @@
 }
 </code></pre></div>
 </div>
+            <p>In <strong>DEMO</strong> <span class="demo-label">2</span> extending from a <code class="code-tag">%placeholder</code> there is not that problem</p>
 <div class="highlight-code-wrapper">
-  <p><strong>SASS code:</strong> extending from <code class="code-tag">.base-button</code></p>
+  <p>Generated CSS code in <strong>DEMO 2</strong></p>
 <div class="highlight-code"><pre><code>
-.base-button
-  background-color: #f0f0f0
-  border-radius: 20px
-  border: 1px solid #ccc
-  color: #333
-  padding: 10px
-  font-size: 13px
-  margin: 0 10px 0 0
-
-.base-button--in-red
-  @extend .base-button
-  background-color: #AD210E
-  color: white
-  border-color: #AD210E
-
-// I only want my base button in blue
-.blue-parent
-  .base-button
-    color: white
-    background-color: blue
+.blue-parent .base-button {
+  color: white;
+  background-color: blue;
+}
 </code></pre></div>
 </div>
           </div>
@@ -110,10 +123,13 @@
           $('.highlight-code').each(function(i, block) {
             hljs.highlightBlock(block);
             if (i === 0) {
+              $('.hljs-at_rule').addClass('red-class');
+            }
+
+            if (i === 1) {
               $('.hljs-class:last').addClass('red-class');
             }
           });
-
         });
       </script>
     </div>
