@@ -1,5 +1,5 @@
 ## What is this?
-Demo to show diference between using sass extend from a css class or a sass placeholder
+Demo to show the diference between using sass extend from a css class or a sass placeholder
 
 ## How to use in your machine
 You need to have node installed
