@@ -149,6 +149,7 @@ li {
 
 .buttons-container {
   padding: 2em
+  text-align: center;
 }
 .blue-parent {
   background-color: #21A5B8;
