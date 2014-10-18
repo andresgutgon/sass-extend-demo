@@ -26,10 +26,24 @@
             <li>Using <code class="code-tag">@extend</code> in <span class="demo-label">demo 1</span> the <button class="base-class--in-red">RED button</button> is styled in BLUE in the blue BOX (I do <strong>NOT</strong> want this)</li>
             <li>In <span class="demo-label">demo 2</span> this is not happening using a <code class="code-tag">%placeholder</code></li>
           </ul>
+
+          <p>The problem in <span class="demo-label">demo 1</span> is that generated CSS add  <code class="code-tag">.base-class--in-red</code> under <code class="code-tag">.is-selected</code>. This was unexpected to me.</p>
+          <div class="highlight-code-wrapper">
+            <p><strong>Generated CSS code:</strong></p>
+          <div class="highlight-code"><pre><code>
+          // Here is the problem.
+          // base-class--in-red also pick BLUE styles
+          .container-demo.is-selected .base-class,
+          .container-demo.is-selected .base-class--in-red{
+            color: white;
+            background-color: #197e8d;
+            border-color: #197e8d;
+          }
+          </code></pre></div>
+          </div>
         </div>
+
         <div class="demo-zone clearfix">
-
-
           <div class="demo-zone__block demo-zone__block--first">
             <div class="demo-zone__block__inner">
               <span class="demo-label">demo 1:</span>
