@@ -154,7 +154,7 @@ li {
 }
 
 @media (min-width: 550px) {
-  .samuel {
+  .highlight-code-wrapper.with-samuel  {
     background-image: url("../images/say-extend-again.png");
     left: 30%;
     display: block;
