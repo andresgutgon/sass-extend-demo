@@ -149,13 +149,13 @@ li {
 
 .buttons-container {
   padding: 2em
-  text-align: center;
 }
 .blue-parent {
   background-color: #21A5B8;
   border: 3px solid #21A5B8;
   padding: 1em;
   margin: 1em 0;
+  text-align: center;
 }
 
 .blue-parent p {
