@@ -5,6 +5,9 @@ body {
 
 h1, h3 {
   font-weight: 300; }
+h1 strong {
+  font-weight: 700;
+}
 
 header {
   margin: 1em 0;
