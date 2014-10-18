@@ -78,14 +78,16 @@ li {margin: 0 0 1em 0;}
     left: 10px; }
 
 .demo-label {
-  min-width: 50px;
+  min-width: 20px;
   display: inline-block;
   border-radius: 2px;
   background-color: #66d433;
   font-size: 0.9em;
   border: 1px solid #347516;
   color: #347516;
-  padding: 0.3em; }
+  padding: 0.3em;
+  text-align: center;
+}
 
 @media (min-width: 768px) {
   .demo-zone__block {
