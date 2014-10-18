@@ -23,8 +23,11 @@
             <li><span class="demo-label">1</span> <code class="code-tag">@extend</code> from a css class</li>
             <li><span class="demo-label">2</span> <code class="code-tag">@extend</code> from a <code class="code-tag">%placeholder</code></li>
           </ul>
+
           <h2>What do I want?</h2>
-          <p>I <strong>NEVER</strong> want to style in blue the <button class="base-class--in-red">RED button</button></p>
+          <p>I've a <button class="base-class--in-red">RED button</button> that inherit styles from a <button class="base-class">Base button</button>.</p>
+          <p>But I <strong>NEVER</strong> want to style in blue the <button class="base-class--in-red">RED button</button></p>
+
           <h2>The problem:</h2>
           <p>The problem in <span class="demo-label">1</span> is that generated CSS add  <code class="code-tag">.base-class--in-red</code> under <code class="code-tag">.is-selected</code>.</p>
           <p>This was unexpected to me <img src="images/scream.png" alt="Scream emoji" class="emoji"></p>
