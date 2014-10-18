@@ -161,21 +161,9 @@ li {
   margin: 0 0 0.5em 0;
 }
 
-@media (min-width: 415px) {
-  .samuel {
-    display: block;
-    left: -23px;
-  }
-}
-
-@media (min-width: 485px) {
-  .samuel {
-    left: -10%;
-  }
-}
-
 @media (min-width: 550px) {
   .samuel {
+    display: block;
     left: 30%;
   }
 }
