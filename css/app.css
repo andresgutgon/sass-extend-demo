@@ -62,7 +62,7 @@ li {
 .intro {
   border-radius: 3px;
   background-color: white;
-  padding: 3em;
+  padding: 1em;
   margin: 0 0 2em 0;
   color: #312019;
 }
@@ -74,7 +74,10 @@ li {
 }
 
 .intro__block {
-  padding: 2em 0 0 0;
+  padding: 0 0 1em 0;
+}
+.intro__block p {
+  margin-top: 0
 }
 
 .code-tag {
@@ -143,7 +146,7 @@ li {
   border: 3px solid #21A5B8;
   padding: 2em;
   padding: 1em;
-  margin: 1em 0;
+  margin: 100px 0 1em 0;
   text-align: center;
 }
 
@@ -161,6 +164,10 @@ li {
 }
 
 @media (min-width: 768px) {
+  .intro {
+    padding: 3em;
+  }
+
   .demo-zone__block {
     width: 48%;
   }
