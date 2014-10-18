@@ -8,7 +8,7 @@ You need to have node installed
 $ git clone git@github.com:andresgutgon/sass-extend-demo.git
 $ cd sass-extend-demo
 $ npm install
-$ $gulp
+$ gulp
 ```
 
 After run `gulp` command you can go to `http://locahost:8000` and see the demo.
