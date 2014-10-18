@@ -20,7 +20,8 @@
       <article>
         <div class="intro">
           <div class="intro__block">
-            <p>I want to <strong>NEVER</strong> style in blue the <button class="base-class--in-red">RED button</button></p>
+            <h2>What?</h2>
+            <p><button class="base-class--in-red">RED button</button> <strong>never</strong> should be <strong>blue</strong></p>
             <div class="demo-zone clearfix">
               <div class="demo-zone__block demo-zone__block--first">
                 <div class="demo-zone__block__inner">
@@ -53,6 +54,18 @@
             <p>In <strong>DEMO</strong> <span class="demo-label">1</span> <strong>sass</strong> code adds <code class="code-tag red-class">.base-class--in-red</code> in <strong>generated CSS code</strong> under <code class="code-tag">.is-blue</code> parent div.</p>
             <p>This was unexpected to me <img src="images/scream.png" alt="Scream emoji" class="emoji">. Maybe it's only me but I didn't know that extending from another class your new class is extended across your entire source code.</p>
             <p>In <strong>DEMO</strong> <span class="demo-label">2</span>, extending from a <code class="code-tag">%placeholder</code> there is not that problem</p>
+<div class="highlight-code-wrapper with-samuel">
+  <p><strong>Generated CSS code:</strong></p>
+<div class="highlight-code"><pre><code>
+// Here is the problem.
+// base-button--in-red also pick BLUE styles
+.blue-parent .base-button,
+.blue-parent .base-button--in-red {
+  color: white;
+  background-color: blue;
+}
+</code></pre></div>
+</div>
 <div class="highlight-code-wrapper">
   <p><strong>SASS code:</strong> extending from <code class="code-tag">.base-button</code></p>
 <div class="highlight-code"><pre><code>
@@ -78,18 +91,6 @@
     background-color: blue
 </code></pre></div>
 </div>
-<div class="highlight-code-wrapper with-samuel">
-  <p><strong>Generated CSS code:</strong></p>
-<div class="highlight-code"><pre><code>
-// Here is the problem.
-// base-button--in-red also pick BLUE styles
-.blue-parent .base-button,
-.blue-parent .base-button--in-red {
-  color: white;
-  background-color: blue;
-}
-</code></pre></div>
-</div>
           </div>
         </div>
       </article>
@@ -108,9 +109,11 @@
 
           $('.highlight-code').each(function(i, block) {
             hljs.highlightBlock(block);
+            if (i === 0) {
+              $('.hljs-class:last').addClass('red-class');
+            }
           });
 
-          $('.hljs-class:last').addClass('red-class');
         });
       </script>
     </div>
