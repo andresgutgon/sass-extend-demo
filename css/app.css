@@ -122,7 +122,9 @@ li {
 
 .demo-zone__block {
   float: left;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 3em;
+}
 .demo-zone__block__inner  {
   overflow: hidden;
   max-height: 352px;
@@ -179,6 +181,7 @@ li {
 
   .demo-zone__block {
     width: 48%;
+    margin-bottom: 0;
   }
 
   .demo-zone__block--first {
