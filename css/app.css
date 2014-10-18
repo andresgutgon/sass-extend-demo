@@ -153,8 +153,7 @@ li {
 }
 .blue-parent {
   background-color: #21A5B8;
-  border-color: #21A5B8;
-  border: 3px solid #197E8D;
+  border: 3px solid #21A5B8;
   padding: 1em;
   margin: 1em 0;
 }
