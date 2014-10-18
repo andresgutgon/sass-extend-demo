@@ -94,14 +94,15 @@ li {
   display: inline-block; }
 
 .highlight-code-wrapper {
-  background-image: url("../images/say-extend-again.png");
-  background-position: bottom center;
-  background-repeat: no-repeat;
   background-color: white;
   margin: 3em 0 1em 0;
   padding: 1em;
   border: 1px solid #d0d0d0;
-  position: relative;
+}
+.highlight-code-wrapper.with-samuel {
+  background-image: url("../images/say-extend-again.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 
 .highlight-code-wrapper p {
