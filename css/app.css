@@ -89,6 +89,10 @@ li {margin: 0 0 1em 0;}
   text-align: center;
 }
 
+.emoji {
+  width: 20px;
+  vertical-align: bottom;
+}
 @media (min-width: 768px) {
   .demo-zone__block {
     width: 48%; }
