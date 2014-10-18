@@ -68,6 +68,21 @@
       <footer>
         Created by <a href="https://twitter.com/andresgutgon">andresgutgon</a>
       </footer>
+
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="/js/highlight.pack.js"></script>
+      <script>
+        $(document).ready(function() {
+
+          hljs.configure({
+            tabReplace: '  '
+          });
+
+          $('.highlight-code').each(function(i, block) {
+            hljs.highlightBlock(block);
+          });
+        });
+      </script>
     </div>
   </body>
 </html>
