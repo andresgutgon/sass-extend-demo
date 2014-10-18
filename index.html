@@ -28,19 +28,19 @@
           </ul>
 
           <p>The problem in <span class="demo-label">demo 1</span> is that generated CSS add  <code class="code-tag">.base-class--in-red</code> under <code class="code-tag">.is-selected</code>. This was unexpected to me.</p>
-          <div class="highlight-code-wrapper">
-            <p><strong>Generated CSS code:</strong></p>
-          <div class="highlight-code"><pre><code>
-          // Here is the problem.
-          // base-class--in-red also pick BLUE styles
-          .container-demo.is-selected .base-class,
-          .container-demo.is-selected .base-class--in-red{
-            color: white;
-            background-color: #197e8d;
-            border-color: #197e8d;
-          }
-          </code></pre></div>
-          </div>
+<div class="highlight-code-wrapper">
+  <p><strong>Generated CSS code:</strong></p>
+<div class="highlight-code"><pre><code>
+// Here is the problem.
+// base-class--in-red also pick BLUE styles
+.container-demo.is-selected .base-class,
+.container-demo.is-selected .base-class--in-red{
+  color: white;
+  background-color: #197e8d;
+  border-color: #197e8d;
+}
+</code></pre></div>
+</div>
         </div>
 
         <div class="demo-zone clearfix">
