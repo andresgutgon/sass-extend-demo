@@ -100,7 +100,7 @@ li {
   border: 1px solid #d0d0d0;
 }
 .highlight-code-wrapper.with-samuel {
-  background-image: url("../images/say-extend-again.png");
+  background-image: none;
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -163,8 +163,9 @@ li {
 
 @media (min-width: 550px) {
   .samuel {
-    display: block;
+    background-image: url("../images/say-extend-again.png");
     left: 30%;
+    display: block;
   }
 }
 
