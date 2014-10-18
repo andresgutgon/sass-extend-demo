@@ -1,47 +1,90 @@
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  background-color: #f7f7f7;
-  font-size: 80%; }
+  background-color: #312019;
+  font-size: 80%;
+}
 
-h1, h3 {
-  font-weight: 300; }
+a, a:hover {
+  color: #312019;
+}
+h1, h2, h3 {
+  font-weight: 300;
+  color: #ffbf00;
+}
 h1 strong {
   font-weight: 700;
+  color: white;
 }
 
 header {
   margin: 1em 0;
-  padding: 0 0 1em 0;
-  text-align: center; }
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h3 {
+  color: rgba(255, 255, 255, 0.2);
+}
 
 footer {
   margin: 1em 0;
-  border-top: 1px solid #d9d9d9;
   padding: 1em 0;
   font-size: 80%;
   color: #cccccc;
   text-align: center; }
   footer a, footer a:hover {
-    color: #666666;
+    color: #ffbf00;
     text-decoration: underline; }
 
 pre {
-  margin: 0; }
+  margin: 0;
+}
 
-li {margin: 0 0 1em 0;}
+ul {
+  padding: 0
+}
+
+li {
+  list-style: none;
+  margin: 0 0 1em 0;
+}
+
+.red-class {
+  color: #AD210E;
+  font-weight: bold;
+  font-size: 1.4em;
+}
 .clearfix:after {
   content: "";
   display: table;
   clear: both; }
 
 .intro {
-  box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
   background-color: white;
   padding: 3em;
-  margin: 0 0 2em 0; }
-  .intro h2 {
-    margin-top: 0; }
+  margin: 0 0 2em 0;
+  color: #312019;
+}
 
+.intro h2 {
+  margin-top: 0;
+  color: #312019;
+  font-size: 3em;
+}
+
+.intro__block {
+  padding: 2em 0 0 0;
+}
+
+.samuel {
+  position: absolute;
+  bottom: 0;
+  width: 350px;
+  left: 30%;
+  z-index: 1;
+  display: none;
+}
 .code-tag {
   background-color: #f0f0f0;
   border: 1px solid #d9d9d9;
@@ -51,19 +94,29 @@ li {margin: 0 0 1em 0;}
   display: inline-block; }
 
 .highlight-code-wrapper {
+  background-image: url("../images/say-extend-again.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
   background-color: white;
-  margin: 1em 0 0 0;
+  margin: 3em 0 1em 0;
   padding: 1em;
-  border: 1px solid #d0d0d0; }
-  .highlight-code-wrapper p {
-    margin: 0; }
+  border: 1px solid #d0d0d0;
+  position: relative;
+}
+
+.highlight-code-wrapper p {
+  margin: 0;
+}
 
 .highlight-code {
   padding: 0;
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 7;
+  position: relative;
+}
 
 .container {
-  max-width: 1024px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1em; }
 
@@ -71,23 +124,19 @@ li {margin: 0 0 1em 0;}
   float: left;
   width: 100%; }
 
-.demo-zone__block__inner {
+.demo-zone__block__inner > div {
   position: relative;
-  border: 1px dotted #d0d0d0;
-  padding: 1em; }
-  .demo-zone__block__inner .demo-label {
-    position: absolute;
-    top: -10px;
-    left: 10px; }
+  border: 1px solid #312019;
+}
 
 .demo-label {
   min-width: 20px;
   display: inline-block;
-  border-radius: 2px;
-  background-color: #66d433;
+  border-radius: 20px;
+  background-color: #312019;
   font-size: 0.9em;
-  border: 1px solid #347516;
-  color: #347516;
+  border: 1px solid #312019;
+  color: white;
   padding: 0.3em;
   text-align: center;
 }
@@ -96,13 +145,40 @@ li {margin: 0 0 1em 0;}
   width: 20px;
   vertical-align: bottom;
 }
+
+@media (min-width: 415px) {
+  .samuel {
+    display: block;
+    left: -23px;
+  }
+}
+
+@media (min-width: 485px) {
+  .samuel {
+    left: -10%;
+  }
+}
+
+@media (min-width: 550px) {
+  .samuel {
+    left: 30%;
+  }
+}
+
 @media (min-width: 768px) {
   .demo-zone__block {
-    width: 48%; }
+    width: 48%;
+  }
 
   .demo-zone__block--first {
     width: 50%;
-    margin: 0 2% 0 0; } }
+    margin: 0 2% 0 0;
+  }
+
+  .highlight-code {
+    background-color: transparent;
+  }
+}
 .container-demo {
   color: #333333;
   background-color: white;
@@ -136,9 +212,9 @@ li {margin: 0 0 1em 0;}
   line-height: 1.6; }
 
 .base-class--in-red {
-  background-color: #ffaca1;
-  color: #4b1109;
-  border-color: #4b1109; }
+  background-color: #AD210E;
+  color: white;
+  border-color: #AD210E; }
 
 .base-placeholder-class, .base-placeholder-class--in-red {
   background-color: #f0f0f0;
@@ -148,6 +224,6 @@ li {margin: 0 0 1em 0;}
   line-height: 1.6; }
 
 .base-placeholder-class--in-red {
-  background-color: #ffaca1;
-  color: #4b1109;
-  border-color: #4b1109; }
+  background-color: #AD210E;
+  color: white;
+  border-color: #AD210E; }

@@ -8,72 +8,83 @@
     <title>Sass extend demo</title>
     <link rel="stylesheet" href="css/github.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
 
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Sass @extend from a css class with <strong>unexpected</strong> result</h1>
+        <h3>DEMO</h3>
+        <h1>Sass <strong>@extend</strong> from a css class with <strong>unexpected</strong> result</h1>
       </header>
       <article>
         <div class="intro">
-          <h2>Demos</h2>
-          <ul>
-            <li><span class="demo-label">1</span> <code class="code-tag">@extend</code> from a css class</li>
-            <li><span class="demo-label">2</span> <code class="code-tag">@extend</code> from a <code class="code-tag">%placeholder</code></li>
-          </ul>
+          <div class="intro__block">
+            <h2>Blog post:</h2>
+            <p>You can read more about this demo <a href="">here</a></p>
+          </div>
 
-          <h2>What do I want?</h2>
-          <p>I've a <button class="base-class--in-red">RED button</button> that inherit styles from a <button class="base-class">Base button</button>.</p>
-          <p>But I <strong>NEVER</strong> want to style in blue the <button class="base-class--in-red">RED button</button></p>
+          <div class="intro__block">
+            <h2>Demo:</h2>
+            <p>I've a <button class="base-class--in-red">RED button</button> that inherits styles from a <button class="base-class">Base button</button>.</p>
+            <p>But I <strong>NEVER</strong> want to style in blue the <button class="base-class--in-red">RED button</button></p>
+          </div>
 
-          <h2>The problem:</h2>
-          <p>The problem in <span class="demo-label">1</span> is that generated CSS add  <code class="code-tag">.base-class--in-red</code> under <code class="code-tag">.is-selected</code>.</p>
-          <p>This was unexpected to me <img src="images/scream.png" alt="Scream emoji" class="emoji"></p>
-          <p>Extending from a <code class="code-tag">%placeholder</code> like in <span class="demo-label">2</span> we do not have that problem</p>
+          <div class="intro__block">
+            <h2>The problem:</h2>
+            <p>The problem is that in <span class="demo-label">1</span> <strong>sass</strong> adds <code class="code-tag red-class">.base-class--in-red</code> in generated CSS under <code class="code-tag">.is-blue</code>.</p>
+            <p>This was unexpected to me <img src="images/scream.png" alt="Scream emoji" class="emoji">. Maybe it's only me but I didn't know that extending from another class your new class is extended across your source code.In the other hand by e/p>
+            <p>In the other hand by extending from a <code class="code-tag">%placeholder</code> like in <span class="demo-label">2</span> we do not have that problem</p>
 <div class="highlight-code-wrapper">
   <p><strong>Generated CSS code:</strong></p>
 <div class="highlight-code"><pre><code>
 // Here is the problem.
 // base-class--in-red also pick BLUE styles
 .container-demo.is-blue .base-class,
-.container-demo.is-blue .base-class--in-red{
+.container-demo.is-blue .base-class--in-red {
   color: white;
   background-color: #197e8d;
   border-color: #197e8d;
 }
 </code></pre></div>
 </div>
-        </div>
-
-        <div class="demo-zone clearfix">
-          <div class="demo-zone__block demo-zone__block--first">
-            <div class="demo-zone__block__inner">
-              <span class="demo-label">1</span>
-              <br>
-              <p data-height="368" data-theme-id="9361" data-slug-hash="vgaFI" data-default-tab="result" data-user="andresgutgon" class='codepen'>See the Pen <a href='http://codepen.io/andresgutgon/pen/vgaFI/'>vgaFI</a> by Andrés (<a href='http://codepen.io/andresgutgon'>@andresgutgon</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-              <script async src="//codepen.io/assets/embed/ei.js"></script>
-            </div> <!-- demo-zone__block__inner -->
-          </div> <!-- demo-zone__block -->
-
-          <div class="demo-zone__block">
-            <div class="demo-zone__block__inner">
-              <span class="demo-label">2</span>
-              <br>
-              <p data-height="519" data-theme-id="9361" data-slug-hash="HnCoG" data-default-tab="result" data-user="andresgutgon" class='codepen'>See the Pen <a href='http://codepen.io/andresgutgon/pen/HnCoG/'>HnCoG</a> by Andrés (<a href='http://codepen.io/andresgutgon'>@andresgutgon</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-              <script async src="//codepen.io/assets/embed/ei.js"></script>
-            </div> <!-- demo-zone__block__inner -->
           </div>
 
+          <div class="intro__block">
+            <h2>Demos:</h2>
+            <div class="demo-zone clearfix">
+              <div class="demo-zone__block demo-zone__block--first">
+                <div class="demo-zone__block__inner">
+                  <p>
+                    <span class="demo-label">1</span>
+                    <strong>DEMO</strong>
+                    <code class="code-tag">@extend</code> from another css class
+                  </p>
+                  <p data-height="368" data-theme-id="9361" data-slug-hash="vgaFI" data-default-tab="result" data-user="andresgutgon" class='codepen'>See the Pen <a href='http://codepen.io/andresgutgon/pen/vgaFI/'>vgaFI</a> by Andrés (<a href='http://codepen.io/andresgutgon'>@andresgutgon</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                  <script async src="https://codepen.io/assets/embed/ei.js"></script>
+                </div> <!-- demo-zone__block__inner -->
+              </div> <!-- demo-zone__block -->
 
-        </div>
+              <div class="demo-zone__block">
+                <div class="demo-zone__block__inner">
+                  <p>
+                    <span class="demo-label">2</span>
+                    <strong>DEMO</strong>
+                    <code class="code-tag">@extend</code> from a <code class="code-tag">%placeholder</code>
+                  </p>
+                  <p data-height="519" data-theme-id="9361" data-slug-hash="HnCoG" data-default-tab="result" data-user="andresgutgon" class='codepen'>See the Pen <a href='http://codepen.io/andresgutgon/pen/HnCoG/'>HnCoG</a> by Andrés (<a href='http://codepen.io/andresgutgon'>@andresgutgon</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                  <script async src="https://codepen.io/assets/embed/ei.js"></script>
+                </div> <!-- demo-zone__block__inner -->
+              </div>
+            </div>
+            </div>
+          </div>
       </article>
       <footer>
-        Created by <a href="https://twitter.com/andresgutgon">andresgutgon</a>
+        <a href="https://twitter.com/andresgutgon">@andresgutgon</a>
       </footer>
 
-      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script src="js/highlight.pack.js"></script>
       <script>
         $(document).ready(function() {
@@ -85,6 +96,8 @@
           $('.highlight-code').each(function(i, block) {
             hljs.highlightBlock(block);
           });
+
+          $('.hljs-class:last').addClass('red-class');
         });
       </script>
     </div>
