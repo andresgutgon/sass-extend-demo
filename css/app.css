@@ -116,7 +116,11 @@ li {
 .demo-zone__block {
   float: left;
   width: 100%; }
-
+.demo-zone__block__inner {
+  overflow: hidden;
+  max-height: 180px;
+  border-bottom: 1px solid #312019;
+}
 .demo-zone__block__inner > div {
   position: relative;
   border: 1px solid #312019;
