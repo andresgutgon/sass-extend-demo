@@ -152,16 +152,20 @@ li {
   vertical-align: bottom;
 }
 
-.blue-parent {
+.parent-wrapper {
+  margin: 1em auto;
+  max-width: 300px
+}
+
+.parent {
   background-color: #21A5B8;
   border: 3px solid #21A5B8;
-  padding: 2em;
   padding: 1em;
-  margin: 100px 0 1em 0;
+  margin: 1em 0;
   text-align: center;
 }
 
-.blue-parent p {
+.parent.is-blue p {
   color: white;
   margin: 0 0 0.5em 0;
 }
