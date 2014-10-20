@@ -158,13 +158,14 @@ li {
 }
 
 .parent {
-  background-color: #21A5B8;
-  border: 3px solid #21A5B8;
   padding: 1em;
   margin: 1em 0;
   text-align: center;
 }
 
+.parent.is-blue {
+  background-color: #21A5B8;
+}
 .parent.is-blue p {
   color: white;
   margin: 0 0 0.5em 0;
@@ -243,4 +244,5 @@ li {
 .base-placeholder-class--in-red {
   background-color: #AD210E;
   color: white;
-  border-color: #AD210E; }
+  border-color: #AD210E;
+}
